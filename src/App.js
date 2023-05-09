@@ -1,30 +1,53 @@
-import React from "react";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// Amplify
+import Amplify from "aws-amplify";
 
-import Login from "./components/login_component";
-import SignUp from "./components/signup_component";
-import UserDetails from "./components/userDetails";
-import ImageUpload from "./components/imageUpload.";
+// Pages
+import Home from "./pages/Home"
+import Error from "./pages/Error";
+import Books from "./pages/Books";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
+import BookDetails from "./pages/BookDetails";
+import Admin from './pages/Admin';
 
-function App() {
-  const isLoggedIn = window.localStorage.getItem("loggedIn");
+// Components
+import Header from "./components/Header"
+
+// Amplify Configurations
+import awsExports from "./aws-exports";
+Amplify.configure(awsExports);
+
+
+const App = () => {
   return (
     <Router>
-      <div className="App">
-        <Routes>
-          <Route
-            exact
-            path="/"
-            element={isLoggedIn == "true" ? <UserDetails /> : <Login />}
-          />
-          <Route path="/sign-in" element={<Login />} />
-          <Route path="/sign-up" element={<SignUp />} />
-          <Route path="/userDetails" element={<UserDetails />} />
-        </Routes>
-        {/* <ImageUpload/> */}
-      </div>
+      <Header />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/cart">
+          <Cart />
+        </Route>
+        <Route path="/checkout">
+          <Checkout />
+        </Route>
+        <Route exact path="/books">
+          <Books />
+        </Route>
+        <Route
+          path="/books/:id"
+          children={<BookDetails></BookDetails>}>
+        </Route>
+        <Route path="/admin">
+          <Admin />
+        </Route>
+        <Route path="*">
+          <Error />
+        </Route>
+      </Switch>
     </Router>
   );
 }

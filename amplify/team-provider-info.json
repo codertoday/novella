@@ -1,0 +1,36 @@
+{
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-novella-prod-84635-authRole",
+      "UnauthRoleArn": "arn:aws:iam::733422381342:role/amplify-novella-prod-84635-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::733422381342:role/amplify-novella-prod-84635-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-novella-prod-84635-deployment",
+      "UnauthRoleName": "amplify-novella-prod-84635-unauthRole",
+      "StackName": "amplify-novella-prod-84635",
+      "StackId": "arn:aws:cloudformation:us-east-1:733422381342:stack/amplify-novella-prod-84635/e9cedc20-ee17-11ed-9634-0acad7f7492d",
+      "AmplifyAppId": "d3skgyu2ljlhr9"
+    },
+    "categories": {
+      "auth": {
+        "novella2100bf8f": {}
+      },
+      "function": {
+        "paymentprocessor": {
+          "deploymentBucketName": "amplify-novella-prod-84635-deployment",
+          "s3Key": "amplify-builds/paymentprocessor-4343664758363236715a-build.zip"
+        },
+        "ordercreator": {
+          "deploymentBucketName": "amplify-novella-prod-84635-deployment",
+          "s3Key": "amplify-builds/ordercreator-6c42412f4a67322f4851-build.zip"
+        }
+      },
+      "storage": {
+        "imagesnovella": {}
+      },
+      "api": {
+        "novella": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "novella",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authnovella2100bf8f",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

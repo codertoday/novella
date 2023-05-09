@@ -1,0 +1,16 @@
+{
+  "resourceName": "imagesnovella",
+  "policyUUID": "bded4bff",
+  "bucketName": "novella0b74166d73134f55a912b973058967ce",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

@@ -1,35 +1,32 @@
 {
-  "name": "react-login-signup-ui-template",
+  "name": "book-store-v2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.2.1",
-    "@fortawesome/free-solid-svg-icons": "^6.2.1",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.1.1",
-    "@testing-library/user-event": "^13.5.0",
-    "bootstrap": "^5.1.3",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-file-base64": "^1.0.3",
-    "react-paginate": "^8.1.4",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "^5.0.1",
-    "styled-components": "^5.3.6",
-    "web-vitals": "^2.1.4"
+    "@aws-amplify/ui-react": "^0.2.9",
+    "@stripe/react-stripe-js": "^1.1.2",
+    "@stripe/stripe-js": "^1.7.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "aws-amplify": "^3.0.18",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.8.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "react-stripe-elements": "^6.0.1",
+    "stripe": "^8.68.0",
+    "uuid": "^8.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
